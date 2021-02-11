@@ -39,4 +39,7 @@ RUN ln -s $VERILATOR_ROOT/share/verilator/include $VERILATOR_ROOT/include && \
 
 ENV PATH $PATH:$VERILATOR_ROOT/bin
 
+# force the use of bash
+RUN ln -sf /bin/bash /bin/sh
+
 WORKDIR /root
