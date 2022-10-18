@@ -11,7 +11,7 @@ RUN apt-get update && \
     apt-get clean
 
 ENV DOCK /opt/docker
-ENV VERILATOR_VERSION v4.108
+ENV VERILATOR_VERSION stable
 ENV VERILATOR_ROOT /opt/verilator
 
 RUN mkdir $DOCK
