@@ -48,8 +48,8 @@ RUN cd $DOCK && \
     rm -rf verilator
 
 # set some environmnet variables
-ENV VERILATOR_ROOT $VERILATOR_INSTALL_DIR
-ENV PATH $PATH:$VERILATOR_ROOT/bin
+#ENV VERILATOR_ROOT $VERILATOR_INSTALL_DIR
+ENV PATH $PATH:$VERILATOR_INSTALL_DIR/bin
 
 # force the use of bash
 RUN ln -sf /bin/bash /bin/sh
