@@ -38,4 +38,8 @@ clean:
 		docker rmi -f $(DOCKER_HUB_USER)/$(DOCKER_NAME):$(DOCKER_VERSION); \
 	fi
 
-.PHONY: all build login tag push clean
+test: build
+	@set -e; \
+	docker run --rm -it $(DOCKER_NAME):$(DOCKER_VERSION)
+
+.PHONY: all build login tag push clean test
