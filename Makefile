@@ -1,15 +1,15 @@
-DOCKER_DIR      ?= stable
+IMG             ?= stable
 DOCKER_NAME     := verilator
-DOCKER_VERSION  := $(DOCKER_DIR)
+DOCKER_VERSION  := $(IMG)
 DOCKER_HUB_USER := m4j0rt0m
 
-DOCKER_IMAGE    := $(DOCKER_DIR)/Dockerfile
+DOCKER_IMAGE    := $(IMG)/Dockerfile
 
 all: build login tag push
 
 build: $(DOCKER_IMAGE)
 	@set -e; \
-	docker build -t $(DOCKER_NAME):$(DOCKER_VERSION) $(DOCKER_DIR)
+	docker build -t $(DOCKER_NAME):$(DOCKER_VERSION) $(IMG)
 
 login:
 	@set -e; \
