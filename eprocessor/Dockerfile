@@ -68,7 +68,9 @@ RUN ln -sf /bin/bash /bin/sh
 
 # some additional libraries
 RUN apt-get install -y \
-    libboost-regex-dev device-tree-compiler vim gawk libboost-all-dev xz-utils \
-    bc kmod fakeroot
+    libboost-regex-dev device-tree-compiler \
+    vim gawk libboost-all-dev xz-utils \
+    bc kmod fakeroot \
+    iputils-ping
 
 WORKDIR /root
