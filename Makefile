@@ -1,4 +1,4 @@
-DOCKER_DIR      := stable
+DOCKER_DIR      ?= stable
 DOCKER_NAME     := verilator
 DOCKER_VERSION  := $(DOCKER_DIR)
 DOCKER_HUB_USER := m4j0rt0m
