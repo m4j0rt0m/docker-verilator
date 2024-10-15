@@ -66,4 +66,8 @@ ENV PATH $PATH:$VERILATOR_INSTALL_DIR/bin
 # force the use of bash
 RUN ln -sf /bin/bash /bin/sh
 
+# some additional libraries
+RUN apt-get install -y \
+    libboost-regex-dev device-tree-compiler vim
+
 WORKDIR /root
