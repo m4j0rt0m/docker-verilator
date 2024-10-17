@@ -71,6 +71,6 @@ RUN apt-get install -y \
     libboost-regex-dev device-tree-compiler \
     vim gawk libboost-all-dev xz-utils \
     bc kmod fakeroot \
-    iputils-ping
+    iputils-ping tree
 
 WORKDIR /root
